@@ -1,9 +1,12 @@
 package com.example.td1;
 
-public class Controller {
-    public Controller(MainActivity activity){
+public class MainController {
+
+    public MainController(MainActivity activity){
         this.activity = activity;
     }
+
+    //////fais le stockage, les appels web et toute la logique de l'appli ///////
 
     public void OnCreate(){
         //listpkm=DL data();
