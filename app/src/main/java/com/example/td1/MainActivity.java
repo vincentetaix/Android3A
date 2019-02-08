@@ -1,11 +1,12 @@
 package com.example.td1;
 
-import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.view.View;
-import android.widget.TextView;
-import android.widget.Toast;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -13,12 +14,35 @@ public class MainActivity extends AppCompatActivity {
 
     private MainController controller;
 
+    //creation de l'affichage de la liste
+    private RecyclerView myRecyclerView; //gere la vue en elle meme
+    private RecyclerView.Adapter myRecyclerAdapter; //gere les donnees a afficher
+    private RecyclerView.LayoutManager myRecyclerLayout; //fait l'interface
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        myRecyclerView = (RecyclerView) findViewById(R.id.my_Rview);
 
+        //dataset de test
+        List<String> input = new ArrayList<>();
+        for (int i = 0; i < 100; i++) {
+            input.add("Test" + i);
+        }
+        showList(input);
+    }
+
+    public void showList(List<String> myDataset) {
+        //utilise un layout lineaire
+        myRecyclerLayout = new LinearLayoutManager(this);
+        myRecyclerView.setLayoutManager(myRecyclerLayout);
+
+        //specifie notre adaptateur
+        myRecyclerAdapter = new MyAdapter(myDataset);
+        myRecyclerView.setAdapter(myRecyclerAdapter);
     }
 
 

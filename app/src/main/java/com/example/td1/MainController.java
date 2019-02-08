@@ -1,5 +1,7 @@
 package com.example.td1;
 
+import android.service.autofill.Dataset;
+
 public class MainController {
 
     public MainController(MainActivity activity){
@@ -9,20 +11,16 @@ public class MainController {
     //////fais le stockage, les appels web et toute la logique de l'appli ///////
 
     public void OnCreate(){
-        //listpkm=DL data();
-        //storedata(listpkm);
-        //activity.ShowList(listpkm);
+        //downloadData();
+                //storedata(listpkm);
+        //activity.showList(listpkm);
     }
 
     private void storedata(){
         //TODO
     }
 
-    /*
-    public void ShowList(listpkm){
-        //TODO
-    }
-    */
+
 
     private MainActivity activity;
 }
