@@ -10,6 +10,6 @@ import retrofit2.http.Query;
 //appelle les donnees
 public interface ConsolesAPI {
 
-        @GET("consoles.json")
-        Call<List<Console>> getlistconsole(@Query("q") String status);
+        @GET("console.json")
+        Call<List<Console>> getlistconsole();
 }

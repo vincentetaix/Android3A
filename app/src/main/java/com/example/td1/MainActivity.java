@@ -1,11 +1,13 @@
 package com.example.td1;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 
 import java.util.List;
+
 
 public class MainActivity extends AppCompatActivity {
 
@@ -37,7 +39,15 @@ public class MainActivity extends AppCompatActivity {
         myRecyclerView.setLayoutManager(myRecyclerLayout);
 
         //specifie notre adaptateur
-        myRecyclerAdapter = new MyAdapter(list);
+        myRecyclerAdapter = new MyAdapter(list, new OnItemClickListener() {
+            @Override
+            public void onItemClick(Console item) {
+                // Create an Intent to start the second activity
+                Intent details = new Intent(MainActivity.this, Activity_details.class);
+                // Start the new activity.
+                startActivity(details);
+            }
+        });
         myRecyclerView.setAdapter(myRecyclerAdapter);
     }
 

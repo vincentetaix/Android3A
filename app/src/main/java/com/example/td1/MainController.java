@@ -1,5 +1,9 @@
 package com.example.td1;
 
+import android.util.Log;
+import android.view.View;
+import android.widget.Toast;
+
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 
@@ -39,6 +43,7 @@ public class MainController {
     }
 
 
+
     public void start() {
         Gson gson = new GsonBuilder()
                 .setLenient()
@@ -51,23 +56,21 @@ public class MainController {
 
         ConsolesAPI API = retrofit.create(ConsolesAPI.class);
 
-        Call<List<Console>> call = API.getlistconsole("status:open");
+        Call<List<Console>> call = API.getlistconsole();
         call.enqueue(new Callback<List<Console>>() {
             @Override
             public void onResponse(Call<List<Console>> call, Response<List<Console>> response) {
                 //recupere les donnes depuis le json
                List<Console> input = response.body();
-               /////ERROR/////////
-                //reponse vide
                activity.showList(input);
             }
 
             @Override
             public void onFailure(Call<List<Console>> call, Throwable t) {
                 //affiche erreur via push
+                Toast.makeText(activity, "Internet Error", Toast.LENGTH_SHORT).show();
             }
         });
-
     }
 
 

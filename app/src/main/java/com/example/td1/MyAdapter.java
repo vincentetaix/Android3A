@@ -1,4 +1,5 @@
 package com.example.td1;
+import android.content.Intent;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -10,9 +11,12 @@ import com.squareup.picasso.Picasso;
 
 import java.util.List;
 
+import static android.support.v4.content.ContextCompat.startActivity;
+
 
 public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
     private List<Console> local_Dataset;
+    private OnItemClickListener listener;
 
     //gere la vue de chaque donnee
     public class MyViewHolder extends RecyclerView.ViewHolder {
@@ -31,7 +35,7 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
         }
     }
     //Constructeur
-    public MyAdapter(List<Console> myDataset){
+    public MyAdapter(List<Console> myDataset, OnItemClickListener listener){
         local_Dataset = myDataset;
     }
 
@@ -48,18 +52,19 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
 
     //remplace le contenu de la vue
     @Override
-    public void onBindViewHolder(MyViewHolder holder, int position) {
+    public void onBindViewHolder(final MyViewHolder holder, int position) {
         //on prend un l'element de notre base a cette position
         //Remplace la vue par son contenu
-        holder.txtHeader.setText(local_Dataset.get(position).getName());//affiche le nom de la console
+        final Console console = local_Dataset.get(position);
+        holder.txtHeader.setText(console.getName());//affiche le nom de la console
         holder.txtHeader.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                ///passage aux details
+                listener.onItemClick(console);
             }
         });
         holder.txtFooter.setText(local_Dataset.get(position).getDesigner());//affiche le constructeur
-        Picasso.get().load(local_Dataset.get(position).getPics_url()).resize(50,50).into(holder.img);
+        Picasso.get().load(local_Dataset.get(position).getPics_url()).resize(100,100).into(holder.img);
        //affiche la photo
     }
 
