@@ -6,6 +6,8 @@ import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 
+import com.google.gson.Gson;
+
 import java.util.List;
 
 
@@ -44,6 +46,9 @@ public class MainActivity extends AppCompatActivity {
             public void onItemClick(Console item) {
                 // Create an Intent to start the second activity
                 Intent details = new Intent(MainActivity.this, Activity_details.class);
+                Gson gson = new Gson();
+                //passe en plus la console sur laquelle on se trouve
+                details.putExtra("console_key", gson.toJson(item));
                 // Start the new activity.
                 startActivity(details);
             }

@@ -9,7 +9,7 @@ public class Console {
     private String CPU;
     private String ROM;
     private String RAM;
-    private String Games_Support;
+    private String Games_support;
     private int Players;
     private String pics_url;
 
@@ -72,11 +72,11 @@ public class Console {
     }
 
     public String getSupport() {
-        return Games_Support;
+        return Games_support;
     }
 
     public void setSupport(String Games_support) {
-        Games_Support = Games_support;
+        this.Games_support = Games_support;
     }
 
     public int getPlayers() {
@@ -102,7 +102,7 @@ public class Console {
         this.CPU = CPU;
         this.ROM = ROM;
         this.RAM = RAM;
-        this.Games_Support = Games_support;
+        this.Games_support = Games_support;
         this.pics_url = pics_url;
     }
 }

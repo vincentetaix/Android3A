@@ -1,17 +1,15 @@
 package com.example.td1;
-import android.content.Intent;
+
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
-
 import com.squareup.picasso.Picasso;
 
 import java.util.List;
 
-import static android.support.v4.content.ContextCompat.startActivity;
 
 
 public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
@@ -37,6 +35,7 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
     //Constructeur
     public MyAdapter(List<Console> myDataset, OnItemClickListener listener){
         local_Dataset = myDataset;
+        this.listener = listener;
     }
 
     //creation des nouvelles vues par le layout manager
@@ -64,8 +63,20 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
             }
         });
         holder.txtFooter.setText(local_Dataset.get(position).getDesigner());//affiche le constructeur
-        Picasso.get().load(local_Dataset.get(position).getPics_url()).resize(100,100).into(holder.img);
+        holder.txtFooter.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                listener.onItemClick(console);
+            }
+        });
+        Picasso.get().load(local_Dataset.get(position).getPics_url()).resize(150,150).into(holder.img);
        //affiche la photo
+        holder.img.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                listener.onItemClick(console);
+            }
+        });
     }
 
     //renvoi la taille du dataset
