@@ -25,6 +25,14 @@ Fonctionnalités:
 Premier écran:
 Mon premier écran comporte la Recycler View. Elle affiche la liste des console des jeux, avec une image, leur nom et leur fabricant.
 
+![Image of 1st screen](https://github.com/vincentetaix/Android3A/blob/master/apk%201.png)
 
+En cas d'absence de connexion internet, un toaster s'affiche avec le message: "Internet Error" afin de notifier l'utilisateur
+Chaque console est clickable, ce qui lance la seconde activité
 
 Second écran:
+Le second écran affiche le détail de la console choisie.
+
+
+On retrouve le nom, le fabricant, les caractéritiques techniques et l'année de sortie.
+On retrouve aussi une photo de la console.
