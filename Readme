@@ -16,7 +16,7 @@ Utilisation de Picasso pour les images
 Seconde activité affichant le détail d'un objet
 
 Suppléments:
-API REST fait maison
+API REST fait maison, trouvable à cette adresse : https://github.com/vincentetaix/Fake_API.github.io
 Gestion du cache pour un fonctionnement hors connexion
 
 Fonctionnalités:
