@@ -11,16 +11,20 @@ Tutoriel Github
 Consignes respectés:
 Architecture MVC
 Utilisation d'une API REST
-Affichage des données dans un RecyclerView
+Affichage des données dans un RecyclerView avec un Adapter
 Utilisation de Picasso pour les images
 Seconde activité affichant le détail d'un objet
 
 Suppléments:
 API REST fait maison, trouvable à cette adresse : https://github.com/vincentetaix/Fake_API.github.io
 Gestion du cache pour un fonctionnement hors connexion
+Toast indiquant une erreur internet si l'app est hors-ligne
 
 Fonctionnalités:
 
 Premier écran:
+Mon premier écran comporte la Recycler View. Elle affiche la liste des console des jeux, avec une image, leur nom et leur fabricant.
+
+
 
 Second écran:
