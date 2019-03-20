@@ -37,7 +37,7 @@ Chaque console est clickable, ce qui lance la seconde activité
 ## Second écran:
 Le second écran affiche le détail de la console choisie.
 
-<img src="https://github.com/vincentetaix/Android3A/blob/master/apk%202.png" width="250"/>
+<img src="https://github.com/vincentetaix/Android3A/blob/master/Apk%202.png" width="250"/>
 
 On retrouve le nom, le fabricant, les caractéritiques techniques et l'année de sortie.
 On retrouve aussi une photo de la console.
