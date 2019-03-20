@@ -19,7 +19,7 @@ Mon Github comporte 2 branches développement et une branche master, afin de n'a
 
 # Suppléments:
 
-- API REST fait maison, trouvable à [cette adresse!](https://github.com/vincentetaix/Fake_API.github.io)
+- API REST fait maison, trouvable à [cette adresse](https://github.com/vincentetaix/Fake_API.github.io)
 - Gestion du cache pour un fonctionnement hors connexion
 - Toast indiquant une erreur internet si l'app est hors-ligne
 
