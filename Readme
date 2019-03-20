@@ -1,0 +1,26 @@
+Projet Android 3A ESIEA
+
+Présentation:
+Projet de 3ème année utilisant le concept de MVC, la RecyclerView et une API REST pour afficher la liste des consoles de jeu
+Mon Github comporte 2 branches développement et une branche master, afin de n'avoir que du code fonctionnel en master.
+
+Prérequis:
+Tutoriel Android Google
+Tutoriel Github
+
+Consignes respectés:
+Architecture MVC
+Utilisation d'une API REST
+Affichage des données dans un RecyclerView
+Utilisation de Picasso pour les images
+Seconde activité affichant le détail d'un objet
+
+Suppléments:
+API REST fait maison
+Gestion du cache pour un fonctionnement hors connexion
+
+Fonctionnalités:
+
+Premier écran:
+
+Second écran:
