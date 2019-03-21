@@ -1,7 +1,7 @@
 Projet Android 3A ESIEA
 
 # Présentation:
-Projet de 3ème année utilisant le concept de MVC, la RecyclerView et une API REST pour afficher la liste des consoles de jeu. 
+Projet de 3ème année en JAVA utilisant le concept de MVC, la RecyclerView et une API REST pour afficher la liste des consoles de jeu. 
 Mon Github comporte 2 branches développement et une branche master, afin de n'avoir que du code fonctionnel en master.
 
 # Prérequis:
@@ -41,3 +41,7 @@ Le second écran affiche le détail de la console choisie.
 
 On retrouve le nom, le fabricant, les caractéritiques techniques et l'année de sortie.
 On retrouve aussi une photo de la console.
+
+# Conclusion
+
+Ce projet m'a permis de m'initier au développement Android et m'a permis de m'améliorer en JAVA.
